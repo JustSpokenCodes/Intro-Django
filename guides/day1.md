@@ -8,20 +8,24 @@
 * Go to your repo root directory
 * `pipenv --three`
 * `pipenv install`
-* `pipenv shell`
-* `pipenv install django`
-* `django-admin startproject djorg .`
-* `django-admin startapp notes`
-* `./manage.py runserver`
-* `./manage.py showmigrations`
-* `./manage.py migrate`
-* `./manage.py runserver`
-* Add model to `notes/models.py`
+* `pipenv shell` - start here when getting into django 
+* `pipenv install django` - you have to install again so django runs 
+* `django-admin startproject djorg .` - this is the project name 
+* `django-admin startapp notes` - this is the notes section with files in it 
+* `./manage.py runserver` - run this so you can see if its all been done correctly and get a link to host 8000 online
+* `./manage.py showmigrations` - shows the migrations that have yet to be migrated 
+* `./manage.py migrate` - to migrate those migrations within django
+* `./manage.py runserver` - run this so we know that the migrations are running
+
+* Add model to `notes/models.py` - write the models class and info. SAVE before continuing
 * Add `'notes'` to `INSTALLED_APPS` in `djorg/settings.py`
-* `./manage.py showmigrations`
-* `./manage.py makemigrations`
-* `./manage.py showmigrations`
-* `./manage.py migrate`
+* `./manage.py showmigrations` - you will see that the new folder is there but says 'no migrations'
+* `./manage.py makemigrations` - making the migrations for the folder to be acknowledge 
+* `./manage.py showmigrations` - ./manage.py sqlmigrate [notes] {0001_initial} so we know whats happening under the hood. youll see that its now there but not checked off just yet
+* `./manage.py migrate` - migrate the table into the application
+
+if you change anything within the models, youll have to 'makemigrations' and 'migrate' again so its up-to-date. 
+
 * `./manage.py shell`
   * `from notes.models import Note`
   * `n = Note(title="example", content="This is a test.")`

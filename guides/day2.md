@@ -57,6 +57,8 @@ admin.site.register(PersonalNote)   # etc.
 
 ## Migrations with New Fields
 
+[You have to ./manage showmigrations, ./manage makemigrations, ./manage migrate]
+
 It would also be nice to track created and modified dates.  
 
 Open `notes/models.py` and add:
@@ -213,3 +215,5 @@ well.
 Django lets us access information that is in multiple tables relatively easily.
 The sql details are hidden from us (in a good way!).  It does all of the under
 the hood operations for us.
+
+[LOOK UP MORE ORM QUERIES]
